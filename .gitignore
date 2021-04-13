@@ -1,0 +1,14 @@
+# system
+.DS_STORE
+
+#VSCode
+.vscode
+
+# Terraform
+.terraform
+*.tfvars
+*tfstate*
+*.tfplan
+
+# Github Super Linter
+super-linter.log
