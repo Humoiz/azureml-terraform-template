@@ -2,7 +2,7 @@
 
 This template deploys complete Azure Machine Learning enviornment via Terraform with very minimal inputs. It supports two kinds of following Azure Machine Learning deployments.
 
-- Azure ML with private endpoints and VNet binding (fully secured)
+- Azure ML with private endpoints and VNet binding
 - Azure ML without private endpoints and VNet binding.
 
 With a single switch of terraform parameter you can choose which kind of AML architecture you want to deploy. The details of these deployments are discussed in the next sections.
@@ -55,9 +55,9 @@ This includes deployment of the following resources:
 
 ## Prerequisites
 
-Make sure you have the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) and the Azure Machine Learning CLI extension installed (`az extension add -n azure-cli-ml`).
-
-[Install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli#install-terraform)
+- [Install Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
+- Install Azure CLI ML extension by running `az extension add -n azure-cli-ml`
+- [Install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli#install-terraform)
 
 ## Run Deployment
 
