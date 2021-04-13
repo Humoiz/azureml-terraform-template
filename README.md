@@ -57,4 +57,14 @@ This includes deployment of the following resources:
 
 Make sure you have the [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli) and the Azure Machine Learning CLI extension installed (`az extension add -n azure-cli-ml`).
 
+[Install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli#install-terraform)
+
 ## Run Deployment
+
+Navigate to `deployment\terraform\aml`
+
+- Run terraform init
+- Run terraform plan
+- Run terraform apply
+
+> You will need to provide values for `project_code` and `env_code`. Value for `location` is set to `West US 2` and `enable_private_link` is set to `true`.
