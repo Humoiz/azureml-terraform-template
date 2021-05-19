@@ -61,10 +61,28 @@ This includes deployment of the following resources:
 
 ## Run Deployment
 
-Navigate to `deployment\terraform\aml`
+Navigate to `deployment/terraform/aml`
 
 - Run terraform init
 - Run terraform plan
 - Run terraform apply
 
 > You will need to provide values for `project_code` and `env_code`. Value for `location` is set to `West US 2` and `enable_private_link` is set to `true`.
+
+## Run Terraform Compliance Tests
+
+[Terraform Compliance](https://terraform-compliance.com/) is a python based framework used to test against terraform execution plan
+with the given scenarios (see folder `deployment/terraform/features`). You need Python 3.x to run it (see [installation docs](https://terraform-compliance.com/pages/installation/))
+
+Execute the following steps to run the tests
+
+```bash
+cd deployment/terraform/aml
+terraform init
+terraform plan -out=plan.tfplan -var 'project_code=dp333' -var 'env_code=dev' -var 'location=West Europe' -var 'enable_private_endpoints=true'
+terraform-compliance -p plan.tfplan -f ../features/
+```
+
+and review the output.
+
+> For the current scenario implementation the location to be used has to be `West Europe`

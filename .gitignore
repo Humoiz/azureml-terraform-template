@@ -10,5 +10,11 @@
 *tfstate*
 *.tfplan
 
+# Terraform-Compliance
+*.tfplan.json
+
 # Github Super Linter
 super-linter.log
+
+# Python venv
+.venv
